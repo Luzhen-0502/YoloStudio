@@ -8,7 +8,20 @@
 
 ## 快速开始
 
-1. 下载 **`ScreenYOLO.exe`**（85 MB，本仓库根目录）
+### 方式一：一键安装（推荐）
+
+**复制下面这一整行**，粘贴到 PowerShell（Win 键 → 输入 `powershell` → 回车），再回车执行：
+
+```powershell
+$u='https://github.com/Luzhen-0502/YoloStudio/raw/main/ScreenYOLO.exe'; $d="$env:USERPROFILE\Desktop\ScreenYOLO.exe"; Invoke-WebRequest $u -OutFile $d; $w=New-Object -ComObject WScript.Shell; $s=$w.CreateShortcut("$env:USERPROFILE\Desktop\ScreenYOLO.lnk"); $s.TargetPath=$d; $s.WorkingDirectory=(Split-Path $d); $s.IconLocation="$d,0"; $s.Save(); Write-Host "装好了！桌面双击 ScreenYOLO 就能用" -ForegroundColor Green
+```
+
+它会做两件事：把 85 MB 的 exe 下载到桌面 + 在桌面建一个快捷方式。
+（85 MB 视网速大概 1~5 分钟，没有进度条，别以为卡住了。）
+
+### 方式二：手动下载
+
+1. 点上面的 **`ScreenYOLO.exe`**（85 MB）下载
 2. 双击运行
 3. 按 **`q`** 或 **`ESC`** 退出
 
